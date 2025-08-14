@@ -3,6 +3,7 @@
 #
 # Author: F.Marques <fmarques_00@protonmail.com>
 
+SIM := verilator
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
 generate:
