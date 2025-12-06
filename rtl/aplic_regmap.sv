@@ -142,7 +142,7 @@ import aplic_pkg::*;
   logic [31:0]            register_address;
   domain_idx_t            target_domain;
   logic [AplicCfg.NrSourcesW-1:0]  target_source;
-  logic [9:0]             target_source_aux;
+  logic [11:0]             target_source_aux;
   logic [NR_REG_LEN-1:0]  target_source_reg;
   logic [6:0]             target_source_reg_aux;
   logic [AplicCfg.NrHartsW-1:0] target_idc_id;
@@ -188,7 +188,7 @@ import aplic_pkg::*;
       end 
     end
 
-    target_source_aux = i_req.addr[9:0] >> 2;
+    target_source_aux = i_req.addr[11:0] >> 2;
     target_source = target_source_aux[AplicCfg.NrSourcesW-1:0];
 
     target_source_reg_aux = i_req.addr[6:0] >> 2;
